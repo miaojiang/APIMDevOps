@@ -39,7 +39,7 @@
             "apiVersion": "2017-03-01",
             "scale": null,
             "properties": {
-                "displayName": "MyCompanyProduct",
+                "displayName": "MyCompanyProduct2",
                 "description": "Subscribers have need to buy my company product to get access to the API. Administrator approval is required.",
                 "terms": null,
                 "subscriptionRequired": true,
