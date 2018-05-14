@@ -7,7 +7,9 @@
         },
         "myproduct_id_value": {
             "value": "myproduct2"
+        },
+        "APIMServiceName": {
+            "value": "www"
         }
-
     }
 }
