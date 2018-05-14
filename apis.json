@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "APIMServiceName": {
+            "type": "String"
+        },
+        "echoapi_id_value": {
+            "type": "String"
+        },
+        "myproduct_id_value": {
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.ApiManagement/service/apis",
+            "name": "[concat(parameters('APIMServiceName'), '/', parameters('echoapi_id_value'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Demo API",
+                "apiRevision": "1",
+                "description": null,
+                "serviceUrl": "http://echoapi.cloudapp.net/api",
+                "path": "demo",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            }
+        },
+        {
+            "type": "Microsoft.ApiManagement/service/products",
+            "name": "[concat(parameters('APIMServiceName'), '/', parameters('myproduct_id_value'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "MyCompanyProduct",
+                "description": "Subscribers have need to buy my company product to get access to the API. Administrator approval is required.",
+                "terms": null,
+                "subscriptionRequired": true,
+                "approvalRequired": true,
+                "subscriptionsLimit": 1,
+                "state": "notPublished"
+            }
+        },
+        {
+            "type": "Microsoft.ApiManagement/service/products/apis",
+            "name": "[concat(parameters('APIMServiceName'), '/', parameters('myproduct_id_value'), '/', parameters('echoapi_id_value'))]",
+            "apiVersion": "2017-03-01",
+            "scale": null,
+            "properties": {
+                "displayName": "Demo API",
+                "apiRevision": "1",
+                "description": null,
+                "serviceUrl": "http://echoapi.cloudapp.net/api",
+                "path": "demo",
+                "protocols": [
+                    "https"
+                ],
+                "authenticationSettings": null,
+                "subscriptionKeyParameterNames": null,
+                "isCurrent": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service/products', parameters('APIMServiceName'), parameters('myproduct_id_value'))]"
+            ]
+        }
+    ]
+}
