@@ -62,11 +62,11 @@
             "properties":{
                 "mode": "Incremental",
                 "templateLink":{
-                    "uri": "uri(deployment().properties.templateLink.uri, 'apis.json')",
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/apis.json",
                     "contentVersion": "1.0.0.0"
                 },
                 "parametersLink":{
-                    "uri": "uri(deployment().properties.templateLink.uri, 'apis.parameters.json')",
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/apis.parameters.json",
                     "contentVersion": "1.0.0.0"
                 }
             }
