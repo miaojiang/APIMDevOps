@@ -31,13 +31,12 @@
         },
         {
             "type": "Microsoft.ApiManagement/service/products/policies",
-            "name": "policy",
+            "name": "[concat(parameters('APIMServiceName'), '/', parameters('starterProductID'), '/policy')]",
             "apiVersion": "2018-01-01",
             "properties": {
                 "policyContent": "[parameters('starterProductPolicy')]"
             },
             "dependsOn": [
-                "[parameters('APIMServiceName')]",
                 "[resourceId('Microsoft.ApiManagement/service/products', parameters('APIMServiceName'), parameters('starterProductID'))]"
             ]
         }

@@ -59,8 +59,8 @@
             ]
         },
         {
-            "type": "policies",
-            "name": "policy",
+            "type": "Microsoft.ApiManagement/service/apis/policies",
+            "name": "[concat(parameters('APIMServiceName'), '/', parameters('demoApiID'), '/policy')]",
             "apiVersion": "2018-01-01",
             "properties": {
                 "policyContent": "[parameters('demoApiPolicy')]"
