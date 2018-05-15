@@ -30,7 +30,7 @@
             }
         },
         {
-            "type": "policies",
+            "type": "Microsoft.ApiManagement/service/products/policies",
             "name": "policy",
             "apiVersion": "2018-01-01",
             "properties": {
