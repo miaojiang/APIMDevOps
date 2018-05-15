@@ -59,7 +59,7 @@
             ]
         },
         {
-            "type": "Microsoft.ApiManagement/service/policies",
+            "type": "policies",
             "name": "demoApiPolicy",
             "apiVersion": "2017-03-01",
             "properties": {
