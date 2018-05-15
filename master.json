@@ -56,22 +56,42 @@
             }
         },
         {
-            "apiVersion": "2017-03-01",
-            "name": "APIsTemplates",
+            "apiVersion": "2017-05-10",
+            "name": "Products",
             "type": "Microsoft.Resources/deployments",
             "properties":{
                 "mode": "Incremental",
                 "templateLink":{
-                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/apis.json",
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/products.json",
                     "contentVersion": "1.0.0.0"
                 },
                 "parametersLink":{
-                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/apis.parameters.json",
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/products.parameters.json",
                     "contentVersion": "1.0.0.0"
                 }
             },
             "dependsOn": [
                 "[parameters('APIMServiceName')]"
+            ]
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "DemoAPI",
+            "type": "Microsoft.Resources/deployments",
+            "properties":{
+                "mode": "Incremental",
+                "templateLink":{
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-api.json",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink":{
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-api.parameters.json",
+                    "contentVersion": "1.0.0.0"
+                }
+            },
+            "dependsOn": [
+                "[parameters('APIMServiceName')]",
+                "Products"
             ]
         }
     ]

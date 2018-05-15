@@ -2,14 +2,14 @@
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {        
-        "echoapi_id_value": {
-            "value": "demoapi2"
-        },
-        "myproduct_id_value": {
-            "value": "myproduct2"
-        },
         "APIMServiceName": {
             "value": "www"
+        },
+        "starterProductID": {
+            "value": "p_starter"
+        },
+        "starterProductPolicy": {
+            "value": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/start-product-policy.xml"
         }
     }
 }
