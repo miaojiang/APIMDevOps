@@ -34,7 +34,8 @@
             "name": "[concat(parameters('APIMServiceName'), '/', parameters('starterProductID'), '/policy')]",
             "apiVersion": "2018-01-01",
             "properties": {
-                "policyContent": "[parameters('starterProductPolicy')]"
+                "policyContent": "[parameters('starterProductPolicy')]",
+                "contentFormat": "rawxml-link"
             },
             "dependsOn": [
                 "[resourceId('Microsoft.ApiManagement/service/products', parameters('APIMServiceName'), parameters('starterProductID'))]"

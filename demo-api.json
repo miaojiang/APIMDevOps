@@ -63,7 +63,8 @@
             "name": "[concat(parameters('APIMServiceName'), '/', parameters('demoApiID'), '/policy')]",
             "apiVersion": "2018-01-01",
             "properties": {
-                "policyContent": "[parameters('demoApiPolicy')]"
+                "policyContent": "[parameters('demoApiPolicy')]",
+                "contentFormat": "rawxml-link"
             },
             "dependsOn": [
                 "[parameters('APIMServiceName')]",
