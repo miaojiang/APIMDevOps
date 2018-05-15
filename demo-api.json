@@ -55,7 +55,7 @@
                 "isCurrent": true
             },
             "dependsOn": [
-                "[concat(parameters('APIMServiceName'), '/apis', parameters('demoApiID'))]"
+                "[concat(parameters('APIMServiceName'), '/apis/', parameters('demoApiID'))]"
             ]
         },
         {
@@ -67,7 +67,7 @@
                 "contentFormat": "rawxml-link"
             },
             "dependsOn": [
-                "[concat(parameters('APIMServiceName'), '/apis', parameters('demoApiID'))]"
+                "[concat(parameters('APIMServiceName'), '/apis/', parameters('demoApiID'))]"
             ]
         }
     ]
