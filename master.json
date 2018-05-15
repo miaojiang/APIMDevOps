@@ -85,7 +85,7 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parametersLink":{
-                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-api.parameters.json",
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-apis.parameters.json",
                     "contentVersion": "1.0.0.0"
                 }
             },
