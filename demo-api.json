@@ -55,7 +55,7 @@
                 "isCurrent": true
             },
             "dependsOn": [
-                "[resourceId('Microsoft.ApiManagement/service', parameters('APIMServiceName'), '/products', parameters('starterProductID'))]"
+                "[resourceId('Microsoft.ApiManagement/service', parameters('APIMServiceName'), 'products', parameters('starterProductID'))]"
             ]
         },
         {
@@ -67,7 +67,7 @@
                 "contentFormat": "rawxml-link"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.ApiManagement/service', parameters('APIMServiceName'), '/apis', parameters('demoApiPolicy'))]"
+                "[resourceId('Microsoft.ApiManagement/service', parameters('APIMServiceName'), 'apis', parameters('demoApiID'))]"
             ]
         }
     ]
