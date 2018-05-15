@@ -9,7 +9,7 @@
             "value": "p_starter"
         },
         "starterProductPolicy": {
-            "value": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/start-product-policy.xml"
+            "value": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/starter-product-policy.xml"
         }
     }
 }
