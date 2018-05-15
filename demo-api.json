@@ -19,7 +19,7 @@
     "resources": [
         {
             "type": "Microsoft.ApiManagement/service/apis",
-            "name": "[concat(parameters('APIMServiceName'), '/', parameters('demoApiID'))]",
+            "name": "[concat(parameters('APIMServiceName'), '/apis', parameters('demoApiID'))]",
             "apiVersion": "2018-01-01",
             "scale": null,
             "properties": {
@@ -55,7 +55,7 @@
                 "isCurrent": true
             },
             "dependsOn": [
-                "[concat(parameters('APIMServiceName'), '/', parameters('demoApiID'))]"
+                "[concat(parameters('APIMServiceName'), '/apis', parameters('demoApiID'))]"
             ]
         },
         {
@@ -67,7 +67,7 @@
                 "contentFormat": "rawxml-link"
             },
             "dependsOn": [
-                "[concat(parameters('APIMServiceName'), '/', parameters('demoApiID'))]"
+                "[concat(parameters('APIMServiceName'), '/apis', parameters('demoApiID'))]"
             ]
         }
     ]
