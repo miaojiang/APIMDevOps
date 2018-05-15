@@ -67,7 +67,6 @@
                 "contentFormat": "rawxml-link"
             },
             "dependsOn": [
-                "[parameters('APIMServiceName')]",
                 "[resourceId('Microsoft.ApiManagement/service/products', parameters('APIMServiceName'), parameters('demoApiID'))]"
             ]
         }
