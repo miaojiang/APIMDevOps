@@ -17,7 +17,7 @@
         {
             "type": "Microsoft.ApiManagement/service/products",
             "name": "[concat(parameters('APIMServiceName'), '/', parameters('starterProductID'))]",
-            "apiVersion": "2017-03-01",
+            "apiVersion": "2018-01-01",
             "scale": null,
             "properties": {
                 "displayName": "MyCompanyProduct2",
@@ -31,8 +31,8 @@
         },
         {
             "type": "policies",
-            "name": "starterProductPolicy",
-            "apiVersion": "2017-03-01",
+            "name": "policy",
+            "apiVersion": "2018-01-01",
             "properties": {
                 "policyContent": "[parameters('starterProductPolicy')]"
             },
