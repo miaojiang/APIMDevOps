@@ -38,7 +38,7 @@
                 "contentFormat": "rawxml-link"
             },
             "dependsOn": [
-                "[concat(parameters('APIMServiceName'), '/', parameters('starterProductID'))]"
+                "[resourceId('Microsoft.ApiManagement/service/products', parameters('APIMServiceName'), parameters('starterProductID'))]"
             ]
         }
     ],
