@@ -85,7 +85,27 @@
                     "contentVersion": "1.0.0.0"
                 },
                 "parametersLink":{
-                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-apis.parameters.json",
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-api.parameters.json",
+                    "contentVersion": "1.0.0.0"
+                }
+            },
+            "dependsOn": [
+                "[parameters('APIMServiceName')]",
+                "Products"
+            ]
+        },
+        {
+            "apiVersion": "2017-05-10",
+            "name": "ConfAPI",
+            "type": "Microsoft.Resources/deployments",
+            "properties":{
+                "mode": "Incremental",
+                "templateLink":{
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/conf-api.json",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink":{
+                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/conf-api.parameters.json",
                     "contentVersion": "1.0.0.0"
                 }
             },
