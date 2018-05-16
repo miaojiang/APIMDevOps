@@ -37,6 +37,15 @@
             "metadata": {
                 "description": "The instance size of this API Management service."
             }
+        },
+        "starterProductID": {
+            "type": "string"
+        },
+        "demoApiID": {
+            "type": "string"
+        },
+        "confApiID": {
+            "type": "string"
         }
     },
     "resources": [
@@ -65,9 +74,13 @@
                     "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/products.json",
                     "contentVersion": "1.0.0.0"
                 },
-                "parametersLink":{
-                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/products.parameters.json",
-                    "contentVersion": "1.0.0.0"
+                "parameters": {        
+                    "APIMServiceName": {
+                        "value": "[parameters('APIMServiceName')]"
+                    },
+                    "starterProductID": {
+                        "value": "[parameters('starterProductID')]"
+                    }
                 }
             },
             "dependsOn": [
@@ -84,9 +97,16 @@
                     "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-api.json",
                     "contentVersion": "1.0.0.0"
                 },
-                "parametersLink":{
-                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-api.parameters.json",
-                    "contentVersion": "1.0.0.0"
+                "parameters": {        
+                    "APIMServiceName": {
+                        "value": "[parameters('APIMServiceName')]"
+                    },
+                    "starterProductID": {
+                        "value": "[parameters('starterProductID')]"
+                    },
+                    "demoApiID": {
+                        "value": "[parameters('demoApiID')]"
+                    }
                 }
             },
             "dependsOn": [
@@ -104,9 +124,16 @@
                     "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/conf-api.json",
                     "contentVersion": "1.0.0.0"
                 },
-                "parametersLink":{
-                    "uri": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/conf-api.parameters.json",
-                    "contentVersion": "1.0.0.0"
+                "parameters": {        
+                    "APIMServiceName": {
+                        "value": "[parameters('APIMServiceName')]"
+                    },
+                    "starterProductID": {
+                        "value": "[parameters('starterProductID')]"
+                    },
+                    "confApiID": {
+                        "value": "[parameters('confApiID')]"
+                    }
                 }
             },
             "dependsOn": [

@@ -9,8 +9,16 @@
             "value": "Contoso"
         },
         "APIMServiceName": {
-            "value": "contosoapim-dev"
+            "value": "www"
+        },
+        "starterProductID": {
+            "value": "p_starter"
+        },
+        "demoApiID": {
+            "value": "demo_api"
+        },
+        "confApiID": {
+            "value": "conf_api"
         }
-
     }
 }

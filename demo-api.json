@@ -10,9 +10,6 @@
         },
         "starterProductID": {
             "type": "string"
-        },
-        "demoApiPolicy": {
-            "type": "string"
         }
     },
     "variables": {},
@@ -63,7 +60,7 @@
             "name": "[concat(parameters('APIMServiceName'), '/', parameters('demoApiID'), '/policy')]",
             "apiVersion": "2018-01-01",
             "properties": {
-                "policyContent": "[parameters('demoApiPolicy')]",
+                "policyContent": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/demo-api-policy.xml",
                 "contentFormat": "rawxml-link"
             },
             "dependsOn": [
