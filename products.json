@@ -38,6 +38,7 @@
                 "contentFormat": "rawxml-link"
             },
             "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service/prodcuts', parameters('APIMServiceName'), parameters('starterProductID'))]"
             ]
         }
     ],
