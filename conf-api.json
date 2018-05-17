@@ -38,6 +38,18 @@
             "dependsOn": [
                 "[resourceId('Microsoft.ApiManagement/service/apis', parameters('APIMServiceName'), parameters('confApiID'))]"
             ]
+        },
+        {
+            "type": "Microsoft.ApiManagement/service/apis/policies",
+            "name": "[concat(parameters('APIMServiceName'), '/', parameters('confApiID'), '/policy')]",
+            "apiVersion": "2018-01-01",
+            "properties": {
+                "policyContent": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/conf-api-policy.xml",
+                "contentFormat": "rawxml-link"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.ApiManagement/service/apis', parameters('APIMServiceName'), parameters('confApiID'))]"
+            ]
         }
     ]
 }
