@@ -24,7 +24,7 @@
                 "apiRevision": "1",
                 "description": null,
                 "serviceUrl": "http://echoapi.cloudapp.net/api",
-                "path": "demo22",
+                "path": "demo",
                 "protocols": [
                     "https"
                 ],
@@ -43,7 +43,7 @@
                 "apiRevision": "1",
                 "description": null,
                 "serviceUrl": "http://echoapi.cloudapp.net/api",
-                "path": "demo22",
+                "path": "demo",
                 "protocols": [
                     "https"
                 ],
