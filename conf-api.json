@@ -21,7 +21,7 @@
             "scale": null,
             "properties": {
                 "contentFormat": "swagger-link-json",
-                "contentValue": "https://conferenceapi.azurewebsites.net/?format=json",
+                "contentValue": "https://raw.githubusercontent.com/miaojiang/APIMDevOps/master/conference.json",
                 "path": "confapi"
             }
         },
