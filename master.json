@@ -37,15 +37,6 @@
             "metadata": {
                 "description": "The instance size of this API Management service."
             }
-        },
-        "starterProductID": {
-            "type": "string"
-        },
-        "demoApiID": {
-            "type": "string"
-        },
-        "confApiID": {
-            "type": "string"
         }
     },
     "resources": [
