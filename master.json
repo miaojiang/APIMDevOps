@@ -35,7 +35,7 @@
             "type": "int",
             "defaultValue": 1,
             "metadata": {
-                "description": "The instance size of this API Management service."
+                "description": "The instance  size of this API Management service."
             }
         }
     },
